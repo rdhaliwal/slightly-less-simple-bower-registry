@@ -1,25 +1,28 @@
 {
-  "name": "simple-bower-registry",
+  "name": "slightly-less-simple-bower-registry",
   "version": "0.0.3",
   "description": "A very simple implementation of a bower 1.0 registry server that can be used to host a private registry.",
   "main": "server.js",
   "bin": {
-    "simple-bower-registry": "./server.js"
+    "slightly-less-simple-bower-registry": "./server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wibblymat/simple-bower-registry"
+    "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry"
   },
   "keywords": [
     "bower",
     "registry"
   ],
-  "author": "Mat Scales",
+  "author": [
+    "Mat Scales",
+    "Randeep Dhaliwal"
+  ]
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/wibblymat/simple-bower-registry/issues"
+    "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry/issues"
   },
-  "homepage": "https://github.com/wibblymat/simple-bower-registry",
+  "homepage": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry",
   "dependencies": {
     "express": "~3.4.4"
   }
