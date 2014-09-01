@@ -1,0 +1,16 @@
+<h1>Bower Registry</h1>
+
+{{#each bowerPackages}}
+<div class="BowerPackage">
+    <h3 class="BowerPackage-PackageName">
+        {{name}}
+    </h3>
+    <small>URL is : {{url}}</small>
+    <p class="BowerPackage-latestVersion">
+        Latest version is:
+    </p>
+    <ul class="BowerPackage-fullVersionList">
+        <li class="BowerPackage-versionEntry"></li>
+    </ul>
+</div>
+{{/each}}

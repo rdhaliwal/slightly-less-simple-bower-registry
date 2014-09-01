@@ -17,13 +17,15 @@
   "author": [
     "Mat Scales",
     "Randeep Dhaliwal"
-  ]
+  ],
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry/issues"
   },
   "homepage": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry",
   "dependencies": {
-    "express": "~3.4.4"
+    "express": "~3.4.4",
+    "handlebars": "~2.0.0-beta.1",
+    "mustache": "~0.8.2"
   }
 }
