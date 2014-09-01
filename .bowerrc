@@ -1,0 +1,8 @@
+{
+    "registry" : {
+          "search" : [ "http://localhost:3333" ],
+          "register" : "http://localhost:3333"
+    },
+    "directory" : "public/bower_components",
+    "interactive" : false
+}
