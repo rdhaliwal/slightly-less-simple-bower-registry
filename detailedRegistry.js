@@ -33,8 +33,22 @@ var getDetailedPackageInfo = function (request, result) {
             console.log('pkgName: ' + packageInfo.name);
             console.log('versions: ' + packageInfo.versions);
             console.log('latestVersion: ' + packageInfo.versions[0]);
+
+            var flatDependencies = [];
+            for (var dep in packageInfo.latest.dependencies) {
+                flatDependencies.push(dep);
+            }
+            packageInfo.latest.dependencies = flatDependencies;
             console.log('dependencies: ' + packageInfo.latest.dependencies);
+
+
+            var flatDevDependencies = [];
+            for (var devDep in packageInfo.latest.devDependencies) {
+                flatDevDependencies.push(devDep);
+            }
+            packageInfo.latest.devDependencies = flatDevDependencies;
             console.log('devDependencies: ' + packageInfo.latest.devDependencies);
+
             result.send(packageInfo);
         });
 };
