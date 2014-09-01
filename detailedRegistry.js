@@ -12,7 +12,7 @@ var getRegistryList = function (request, result) {
 
     var temp = [];
     for (var name in registry.packages) {
-        getPackageInfo(name);
+        //getDetailedPackageInfo(name);
         temp.push({
             name: name,
             url: registry.packages[name]
@@ -25,15 +25,20 @@ var getRegistryList = function (request, result) {
     result.send(hbTemplate(mustacheData));
 };
 
-var getPackageInfo = function (pkgName) {
-    bower.commands.info(pkgName)
-        .on('end', function (result) {
-            console.log('Loaded details for : ' + pkgName);
-            console.log('pkgName: ' + pkgName);
-            console.log('versions: ' + result.versions);
-            console.log('latestVersion: ' + result.versions[0]);
+var getDetailedPackageInfo = function (request, result) {
+    console.log(request.params.name);
+    bower.commands.info(request.params.name)
+        .on('end', function (packageInfo) {
+            console.log('Loaded details for : ' + request.params.name);
+            console.log('pkgName: ' + packageInfo.name);
+            console.log('versions: ' + packageInfo.versions);
+            console.log('latestVersion: ' + packageInfo.versions[0]);
+            console.log('dependencies: ' + packageInfo.latest.dependencies);
+            console.log('devDependencies: ' + packageInfo.latest.devDependencies);
+            result.send(packageInfo);
         });
 };
 
 
 exports.getRegistryList = getRegistryList;
+exports.getDetailedPackageInfo = getDetailedPackageInfo;
