@@ -23,6 +23,7 @@ postPackage = function (request, response) {
 			console.log('Failed to write the package data to disk!');
 			console.log(err);
 		}
+		console.log('Successfully created the new package, ' + request.body.name);
 	});
 	response.send(201);
 },
@@ -42,6 +43,7 @@ getSpecificPackage = function (request, response) {
 },
 
 searchPackage = function (request, response) {
+	console.log('Searching for: ' + request.params.name);
 	var results = Object.keys(registry.packages).filter(function (pkgName) {
 		return pkgName.indexOf(request.params.name) !== -1;
 	}).map(function (pkgName) {
@@ -50,7 +52,6 @@ searchPackage = function (request, response) {
 			url: registry.packages[pkgName]
 		};
 	});
-
 	response.send(results);
 };
 
