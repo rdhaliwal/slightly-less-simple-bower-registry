@@ -1,25 +1,30 @@
 <html>
 <head>
     <title>Bower Registry</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/viewRegistryList.css" charset="utf-8">
+
 </head>
 <body>
-    <h1>Bower Registry</h1>
+    <h1 class="BowerRegistryHeading">Bower Registry</h1>
 
     {{#each bowerPackages}}
-    <details class="BowerPackage">
+    <details class="BowerPackage" {{#if @first}} open {{/if}}>
         <summary class="BowerPackage-summary">
             <h3 class="BowerPackage-packageName">
                 {{name}}
             </h3>
         </summary>
-        <small>Package is located at: <a href="{{url}}">{{url}}</a></small>
-        <p class="BowerPackage-latestVersion">
-            Latest version is:
-        </p>
-        <ul class="BowerPackage-fullVersionList">
-            <li class="BowerPackage-versionEntry"></li>
-        </ul>
+        <div class="BowerPackage-details">
+            <small>Package is located at: <a href="{{url}}">{{url}}</a></small>
+            <p class="BowerPackage-latestVersion">
+                Latest version is:
+            </p>
+            <ul class="BowerPackage-fullVersionList">
+                <li class="BowerPackage-versionEntry"></li>
+            </ul>
+        </div>
     </details>
     {{/each}}
 </body>
