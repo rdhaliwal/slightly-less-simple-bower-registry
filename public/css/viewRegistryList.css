@@ -31,9 +31,34 @@
     border-bottom-left-radius: 5px;
 }
 
-.BowerPackage .BowerPackage-details.is-loading {
-    background-color: #cc0000;
+.BowerPackage .BowerPackage-loadingIcon {
+    display: none;
 }
+
+.BowerPackage .BowerPackage-details.is-loading {
+    /* background-color: #cc0000; */
+    min-height: 100px;
+}
+
+.BowerPackage .BowerPackage-details.is-loading .BowerPackage-loadingIcon {
+    display: block;
+	border-bottom: 4px solid rgba(0, 0, 0, .2);
+	border-left: 4px solid rgba(0, 0, 0, .2);
+	border-right: 4px solid rgba(0, 0, 0, .2);
+	border-top: 4px solid rgba(0, 0, 0, .5);
+	border-radius: 100%;
+	height: 32px;
+	width: 32px;
+	-webkit-animation: spin .6s infinite linear;
+    text-indent: 999em;
+    margin:3em auto;
+}
+
+@-webkit-keyframes spin {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+
 
 .BowerPackage-versionList .BowerPackage-versionListEntry {
     display: inline;

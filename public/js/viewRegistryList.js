@@ -11,14 +11,15 @@ $(document).ready(function() {
             var $details = $(this).find('.BowerPackage-details');
 
             if ($package.attr('data-loaded-data') !== 'true') {
-                console.log(tempUrl);
+                $details.addClass('is-loading');
+                console.log('Firing off request to:' + tempUrl);
                 $.ajax({
                     url: tempUrl,
                     cache: true
                 })
                 .done(function( html ) {
+                    $details.removeClass('is-loading');
                     $details.append(html);
-                    //$details.append(JSON.stringify(html));
                     $package.attr('data-loaded-data', 'true');
                 });
             }
@@ -33,12 +34,14 @@ $(document).ready(function() {
             var $details = $(this).find('.BowerPackage-details');
 
             if ($package.attr('data-loaded-data') !== 'true') {
-                console.log(tempUrl);
+                $details.addClass('is-loading');
+                console.log('Firing off request to:' + tempUrl);
                 $.ajax({
                     url: tempUrl,
                     cache: true
                 })
                 .done(function( html ) {
+                    $details.removeClass('is-loading');
                     $details.append(html);
                     $package.attr('data-loaded-data', 'true');
                 });
