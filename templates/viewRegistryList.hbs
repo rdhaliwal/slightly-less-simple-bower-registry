@@ -10,7 +10,7 @@
     <h1 class="BowerRegistryHeading">Bower Registry</h1>
 
     {{#each bowerPackages}}
-    <details class="BowerPackage" {{#if @first}} open {{/if}}>
+    <details class="BowerPackage js-bowerPackage" data-package-name="{{name}}" {{#if @first}} open {{/if}}>
         <summary class="BowerPackage-summary">
             <h3 class="BowerPackage-packageName">
                 {{name}}
@@ -27,5 +27,10 @@
         </div>
     </details>
     {{/each}}
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="/js/viewRegistryList.js"></script>
+
 </body>
 </html>
