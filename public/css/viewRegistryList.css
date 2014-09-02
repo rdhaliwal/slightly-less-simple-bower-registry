@@ -34,3 +34,9 @@
 .BowerPackage .BowerPackage-details.is-loading {
     background-color: #cc0000;
 }
+
+.BowerPackage-versionList .BowerPackage-versionListEntry {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}

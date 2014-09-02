@@ -26,12 +26,16 @@ var getRegistryList = function (request, result) {
 };
 
 var getDetailedPackageInfo = function (request, result) {
-    console.log(request.params.name);
+    var templateFile = fs.readFileSync('./templates/tempPackageTemplate.hbs', 'utf-8');
+    var hbTemplate = handlebars.compile(templateFile);
+
     bower.commands.info(request.params.name)
         .on('end', function (packageInfo) {
             console.log('Loaded details for : ' + request.params.name);
             console.log('pkgName: ' + packageInfo.name);
             console.log('versions: ' + packageInfo.versions);
+
+            packageInfo.latestVersion = packageInfo.versions[0];
             console.log('latestVersion: ' + packageInfo.versions[0]);
 
             var flatDependencies = [];
@@ -49,7 +53,8 @@ var getDetailedPackageInfo = function (request, result) {
             packageInfo.latest.devDependencies = flatDevDependencies;
             console.log('devDependencies: ' + packageInfo.latest.devDependencies);
 
-            result.send(packageInfo);
+
+            result.send(hbTemplate(packageInfo));
         });
 };
 

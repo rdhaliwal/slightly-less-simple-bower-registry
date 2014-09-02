@@ -1,0 +1,29 @@
+<p class="BowerPackage-latestVersion">
+    Latest version is: {{ latestVersion }}
+</p>
+
+<p>Dependencies: </p>
+<ul class="BowerPackage-dependencyList">
+    {{#each latest.dependencies}}
+    <li class="BowerPackage-dependencylistEntry">{{.}}</li>
+    {{else}}
+    <li class="BowerPackage-dependencylistEntry">No Dependencies</li>
+    {{/each}}
+</ul>
+
+<p>Dev Dependencies: </p>
+<ul class="BowerPackage-dependencyList">
+    {{#each latest.devDependencies}}
+    <li class="BowerPackage-dependencylistEntry">{{.}}</li>
+    {{else}}
+    <li class="BowerPackage-dependencylistEntry">No Dev Dependencies</li>
+    {{/each}}
+</ul>
+
+
+<p>Available versions:</p>
+<ul class="BowerPackage-versionList">
+    {{#each versions}}
+    <li class="BowerPackage-versionListEntry">{{.}}</li>
+    {{/each}}
+</ul>
