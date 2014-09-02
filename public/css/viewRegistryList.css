@@ -19,9 +19,15 @@
     border-top-left-radius: 5px;
 }
 
-.BowerPackage .BowerPackage-packageName {
+.BowerPackage .BowerPackage-packageName,
+.BowerPackage .BowerPackage-packageNameLatestVersion {
     display : inline;
     font-weight: 100;
+}
+
+.BowerPackage .BowerPackage-packageNameLatestVersion {
+    float:right;
+    margin: 0;
 }
 
 .BowerPackage .BowerPackage-details {

@@ -8,6 +8,7 @@ $(document).ready(function() {
 
             var tempUrl = "/view/" + $(this).data("package-name");
             var $package = $(this);
+            var $version = $(this).find('.js-bowerPackageVersion');
             var $details = $(this).find('.BowerPackage-details');
 
             if ($package.attr('data-loaded-data') !== 'true') {
@@ -17,9 +18,10 @@ $(document).ready(function() {
                     url: tempUrl,
                     cache: true
                 })
-                .done(function( html ) {
+                .done(function( result ) {
                     $details.removeClass('is-loading');
-                    $details.append(html);
+                    $details.append(result);
+                    $version.html($details.find('.BowerPackage-latestVersionNumber'));
                     $package.attr('data-loaded-data', 'true');
                 });
             }
@@ -31,6 +33,7 @@ $(document).ready(function() {
         $('.js-bowerPackage').on('click', function(){
             var tempUrl = "/view/" + $(this).data("package-name");
             var $package = $(this);
+            var $version = $(this).find('.js-bowerPackageVersion');
             var $details = $(this).find('.BowerPackage-details');
 
             if ($package.attr('data-loaded-data') !== 'true') {
@@ -40,9 +43,10 @@ $(document).ready(function() {
                     url: tempUrl,
                     cache: true
                 })
-                .done(function( html ) {
+                .done(function( result ) {
                     $details.removeClass('is-loading');
-                    $details.append(html);
+                    $details.append(result);
+                    $version.html($details.find('.BowerPackage-latestVersionNumber'));
                     $package.attr('data-loaded-data', 'true');
                 });
             }
