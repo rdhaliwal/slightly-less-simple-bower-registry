@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Bower Registry</title>
+    <link rel="stylesheet" href="/css/viewRegistryList.css" charset="utf-8">
+</head>
+<body>
+    <h1>Bower Registry</h1>
+
+    {{#each bowerPackages}}
+    <details class="BowerPackage">
+        <summary class="BowerPackage-summary">
+            <h3 class="BowerPackage-packageName">
+                {{name}}
+            </h3>
+        </summary>
+        <small>Package is located at: <a href="{{url}}">{{url}}</a></small>
+        <p class="BowerPackage-latestVersion">
+            Latest version is:
+        </p>
+        <ul class="BowerPackage-fullVersionList">
+            <li class="BowerPackage-versionEntry"></li>
+        </ul>
+    </details>
+    {{/each}}
+</body>
+</html>

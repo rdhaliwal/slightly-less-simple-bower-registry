@@ -7,7 +7,7 @@ var fs = require('fs'),
 
 
 var getRegistryList = function (request, result) {
-    var templateFile = fs.readFileSync('viewRegistryList.hbs', 'utf-8');
+    var templateFile = fs.readFileSync('./templates/viewRegistryList.hbs', 'utf-8');
     var hbTemplate = handlebars.compile(templateFile);
 
     var temp = [];

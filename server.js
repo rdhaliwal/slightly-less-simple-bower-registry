@@ -5,6 +5,7 @@ var express = require('express'),
 	fs = require('fs');
 
 var app = express(),
+	path = require('path'),
 	registry = require('./initRegistry'),
 	basicRegistry = require('./basicRegistry'),
 	detailedRegistry = require('./detailedRegistry');
@@ -14,6 +15,7 @@ app.configure(function () {
 	app.use(app.router);
 	app.use(express.logger());
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.listen(registry.port, function () {

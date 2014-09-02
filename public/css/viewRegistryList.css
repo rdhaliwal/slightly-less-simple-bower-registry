@@ -1,0 +1,9 @@
+.BowerPackage {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.BowerPackage .BowerPackage-packageName {
+    display : inline;
+}
