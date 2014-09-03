@@ -2,12 +2,13 @@
 
 var fs = require('fs'),
     handlebars = require('handlebars'),
+    path = require('path'),
     bower = require('bower'),
     registry = require('./initRegistry');
 
 
 var getRegistryList = function (request, result) {
-    var templateFile = fs.readFileSync('./templates/viewRegistryList.hbs', 'utf-8');
+    var templateFile = fs.readFileSync(path.join(__dirname, 'templates') + '/viewRegistryList.hbs', 'utf-8');
     var hbTemplate = handlebars.compile(templateFile);
 
     var temp = [];
@@ -26,7 +27,7 @@ var getRegistryList = function (request, result) {
 };
 
 var getDetailedPackageInfo = function (request, result) {
-    var templateFile = fs.readFileSync('./templates/tempPackageTemplate.hbs', 'utf-8');
+    var templateFile = fs.readFileSync(path.join(__dirname, 'templates') + '/viewRegistryList.hbs', 'utf-8');
     var hbTemplate = handlebars.compile(templateFile);
 
     bower.commands.info(request.params.name)
