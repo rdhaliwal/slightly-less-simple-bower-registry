@@ -35,7 +35,8 @@ then the normal public one, configure your .bowerrc file as such:
           "search" : [ "http://localhost:3333","http://bower.herokuapp.com/" ],
           "register" : "http://localhost:3333"
     }
-}```
+}
+```
 
 
 ### Differences from the live bower registry
