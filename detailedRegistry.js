@@ -27,7 +27,7 @@ var getRegistryList = function (request, result) {
 };
 
 var getDetailedPackageInfo = function (request, result) {
-    var templateFile = fs.readFileSync(path.join(__dirname, 'templates') + '/viewRegistryList.hbs', 'utf-8');
+    var templateFile = fs.readFileSync(path.join(__dirname, 'templates') + '/tempPackageTemplate.hbs', 'utf-8');
     var hbTemplate = handlebars.compile(templateFile);
 
     bower.commands.info(request.params.name)
