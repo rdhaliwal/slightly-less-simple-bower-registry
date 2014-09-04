@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                 browsers: ['Chrome > 0.5%', 'Firefox > 0.5%', 'Opera > 0.5%','Safari > 5', 'ie >= 7']
             },
             default: {
-                src: 'public/css/*.css'
+                src: 'public/css/viewRegistryList.css',
+               dest: 'public/css/build.css'
             }
         }
     });

@@ -6,17 +6,25 @@
 
 .BowerPackage {
     margin: 20px 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
     font-family: 'Open Sans';
     font-weight: 100;
-    box-shadow: 0px 3px 0px 0px rgba(226, 228, 231, 0.75);
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(226, 228, 231, 0.75);
+       -moz-box-shadow: 0px 3px 0px 0px rgba(226, 228, 231, 0.75);
+            box-shadow: 0px 3px 0px 0px rgba(226, 228, 231, 0.75);
 }
 
 .BowerPackage .BowerPackage-summary {
     padding: 10px;
     background-color: #F5F7FA;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+       -moz-border-radius-topright: 5px;
+            border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+       -moz-border-radius-topleft: 5px;
+            border-top-left-radius: 5px;
 }
 
 .BowerPackage .BowerPackage-packageName,
@@ -33,8 +41,12 @@
 .BowerPackage .BowerPackage-details {
     padding: 10px;
     background-color: #E6E9ED;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+       -moz-border-radius-bottomright: 5px;
+            border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+       -moz-border-radius-bottomleft: 5px;
+            border-bottom-left-radius: 5px;
 }
 
 .BowerPackage .BowerPackage-loadingIcon {
@@ -52,7 +64,9 @@
 	border-left: 4px solid rgba(0, 0, 0, .2);
 	border-right: 4px solid rgba(0, 0, 0, .2);
 	border-top: 4px solid rgba(0, 0, 0, .5);
-	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	        border-radius: 100%;
 	height: 32px;
 	width: 32px;
 	-webkit-animation: spin .6s infinite linear;
@@ -61,8 +75,8 @@
 }
 
 @-webkit-keyframes spin {
-	from {transform: rotate(0deg);}
-	to {transform: rotate(359deg);}
+	from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+	to {-webkit-transform: rotate(359deg);transform: rotate(359deg);}
 }
 
 
