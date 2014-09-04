@@ -1,32 +1,41 @@
 {
-  "name": "slightly-less-simple-bower-registry",
-  "version": "1.0.2",
-  "description": "A very simple implementation of a bower 1.0 registry server that can be used to host a private registry. It also allows users to search through and get info on registered packages.",
-  "main": "server.js",
-  "bin": {
-    "slightly-less-simple-bower-registry": "./server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry"
-  },
-  "keywords": [
-    "bower",
-    "registry"
-  ],
-  "author": [
-    "Mat Scales",
-    "Randeep Dhaliwal"
-  ],
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry/issues"
-  },
-  "homepage": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry",
-  "dependencies": {
-    "express": "~3.4.4",
-    "handlebars": "~2.0.0-beta.1",
-    "mustache": "~0.8.2",
-    "bower": "~1.3.9"
-  }
+    "name": "slightly-less-simple-bower-registry",
+    "version": "1.0.2",
+    "description": "A very simple implementation of a bower 1.0 registry server that can be used to host a private registry. It also allows users to search through and get info on registered packages.",
+    "main": "server.js",
+    "bin": {
+        "slightly-less-simple-bower-registry": "./server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry"
+    },
+    "keywords": [
+        "bower",
+        "registry"
+    ],
+    "author": [
+        "Mat Scales",
+        "Randeep Dhaliwal"
+    ],
+    "license": "BSD-2-Clause",
+    "bugs": {
+        "url": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry/issues"
+    },
+    "homepage": "https://github.com/rdhaliwal/slightly-less-simple-bower-registry",
+    "dependencies": {
+        "express": "~3.4.4",
+        "handlebars": "~2.0.0-beta.1",
+        "mustache": "~0.8.2",
+        "bower": "~1.3.9"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-develop": "~0.2.2",
+        "load-grunt-tasks": "~0.2.0",
+        "request": "~2.27.0",
+        "time-grunt": "~0.1.1",
+        "grunt-autoprefixer": "^0.8.2"
+    }
 }
