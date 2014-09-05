@@ -21,7 +21,7 @@ $(document).ready(function() {
                 .done(function( result ) {
                     $details.removeClass('is-loading');
                     $details.append(result);
-                    $version.html($details.find('.BowerPackage-latestVersionNumber'));
+                    $version.html($details.find('.BowerPackage-latestVersionNumber').html());
                     $package.attr('data-loaded-data', 'true');
                 });
             }
@@ -46,7 +46,7 @@ $(document).ready(function() {
                 .done(function( result ) {
                     $details.removeClass('is-loading');
                     $details.append(result);
-                    $version.html($details.find('.BowerPackage-latestVersionNumber'));
+                    $version.html($details.find('.BowerPackage-latestVersionNumber').html());
                     $package.attr('data-loaded-data', 'true');
                 });
             }

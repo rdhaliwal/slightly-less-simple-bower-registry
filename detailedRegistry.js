@@ -36,8 +36,8 @@ var getDetailedPackageInfo = function (request, result) {
             console.log('pkgName: ' + packageInfo.name);
             console.log('versions: ' + packageInfo.versions);
 
-            packageInfo.latestVersion = packageInfo.versions[0];
-            console.log('latestVersion: ' + packageInfo.versions[0]);
+            //packageInfo.latest.version = packageInfo.versions[0];
+            console.log('latestVersion: ' + packageInfo.latest.version);
 
             var flatDependencies = [];
             for (var dep in packageInfo.latest.dependencies) {

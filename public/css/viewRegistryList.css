@@ -55,12 +55,12 @@
 	border-radius: 100%;
 	height: 32px;
 	width: 32px;
-	-webkit-animation: spin .6s infinite linear;
+	animation: spin .6s infinite linear;
     text-indent: 999em;
     margin:3em auto;
 }
 
-@-webkit-keyframes spin {
+@keyframes spin {
 	from {transform: rotate(0deg);}
 	to {transform: rotate(359deg);}
 }
