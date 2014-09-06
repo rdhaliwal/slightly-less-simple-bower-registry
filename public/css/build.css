@@ -103,3 +103,7 @@
     list-style-type: none;
     padding-right: 20px;
 }
+
+.u-hidden {
+    display: none;
+}
