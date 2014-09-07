@@ -2,9 +2,11 @@ slightly-less-simple-bower-registry
 =====================
 
 A simple registry server compatible with bower 1.x.
-Designed for those who want to host their own private registry.
-Go down to **TODO** for the difference between the simple-bower-registry
-and slightly-less-simple-bower-registry
+Designed for those who want to host their own private registry,
+but also need a simple web interface to browse through the bower packages.
+[Scroll down a bit ](#differences-from-the-live-bower-registry) for more information
+on the difference between [@wibblymats excellent simple-bower-registry](https://github.com/wibblymat/simple-bower-registry)
+and this fork/spinoff project, slightly-less-simple-bower-registry
 
 ### Usage
 
@@ -29,6 +31,7 @@ Create a key of `registry` and set it to the URL of the registry server, e.g.
 
 If you would like your setup to try searching your private registry,
 then the normal public one, configure your .bowerrc file as such:
+
 ```json
 {
     "registry" : {
@@ -49,15 +52,14 @@ memory and persisted to a plain JSON file.
 
 ### Differences from simple-bower-registry
 
-**TODO**
-
-The original simple-bower-registry by @wibblymat is beautifully simple and lightweight
-but when we started using it, there were some frequently asked for features.
+The original [simple-bower-registry](https://github.com/wibblymat/simple-bower-registry)
+ by [@wibblymat](https://github.com/wibblymat) is beautifully simple and lightweight
+ but when we started using it, there were some frequently asked for features.
 Primarily, the ability to get a list and search through all the
 packages on a registry, as well as learning all the available
 versions and dependencies of a package.
 
-So this fork is nowhere near as beautifully simple as the original,
+So this fork is nowhere near as simple as the original,
 but it now has the `/view` context path created, which
 displays the list of packages neatly, as well as providing
 more information to the users that want to dig deeper.
