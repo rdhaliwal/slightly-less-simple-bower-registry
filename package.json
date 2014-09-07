@@ -1,7 +1,7 @@
 {
     "name": "slightly-less-simple-bower-registry",
-    "version": "1.0.3",
-    "description": "A very simple implementation of a bower 1.0 registry server that can be used to host a private registry. It also allows users to search through and get info on registered packages.",
+    "version": "1.1.0",
+    "description": "A very simple registry server compatible with bower 1.x. Forked from simple-bower-registry to add a simple web interface to view all the registered packages.",
     "main": "server.js",
     "bin": {
         "slightly-less-simple-bower-registry": "./server.js"
