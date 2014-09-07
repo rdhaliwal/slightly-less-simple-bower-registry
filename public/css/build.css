@@ -1,7 +1,19 @@
-.BowerRegistryHeading {
+.BowerRegistry-heading {
     font-family: 'Open Sans';
     font-weight: 100;
     text-align: center;
+}
+
+.BowerSearch {
+    text-align: center;
+}
+.BowerSearch-label {
+    font-family: 'Open Sans';
+    font-weight: 100;
+}
+.BowerSearch-input {
+    font-family: 'Open Sans';
+    font-weight: 100;
 }
 
 .BowerPackage {

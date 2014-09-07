@@ -7,12 +7,16 @@
 
 </head>
 <body>
-    <h1 class="BowerRegistryHeading">Bower Registry</h1>
+    <h1 class="BowerRegistry-heading">Bower Registry</h1>
+    <div class="BowerSearch">
+        <label for="searchField" class="BowerSearch-label">Search for bower components: </label>
+        <input type="text" id="searchField" placeholder="e.g. jquery" class="BowerSearch-input">
+    </div>
 
     {{#each bowerPackages}}
     <details class="BowerPackage js-bowerPackage" data-package-name="{{name}}" {{#if @first}} open {{/if}}>
         <summary class="BowerPackage-summary">
-            <h3 class="BowerPackage-packageName">
+            <h3 class="BowerPackage-packageName js-packageName">
                 {{name}}
             </h3>
             <h3 class="BowerPackage-packageNameLatestVersion js-bowerPackageVersion"></h3>
