@@ -11,7 +11,8 @@ and this fork/spinoff project, slightly-less-simple-bower-registry
 ### Usage
 
 Install with `npm install -g slightly-less-simple-bower-registry`.
-Then you can run the server as `slightly-less-simple-bower-registry`.
+
+Then you can run the server as `slightly-less-simple-bower-registry`. TODO: Fix this?
 
 The server runs on port 3333.
 By default the registry data is stored in a single file `./package-data.json`.
