@@ -34,3 +34,8 @@ app.get ('/packages/search/:name', basicRegistry.searchPackage);
 //Stupid bower registry stuff, purely just for human usability
 app.get('/view', detailedRegistry.getRegistryList);
 app.get('/view/:name', detailedRegistry.getDetailedPackageInfo);
+
+//Default will redirect to the view page
+app.get('/', function(req,res){
+    res.redirect('/view');
+});

@@ -2,3 +2,4 @@ node_modules
 package-data.json
 *.DS_Store
 sampleRegistryData.json
+TODO.md
