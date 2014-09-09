@@ -7,10 +7,12 @@
 .BowerSearch {
     text-align: center;
 }
+
 .BowerSearch-label {
     font-family: 'Open Sans';
     font-weight: 100;
 }
+
 .BowerSearch-input {
     font-family: 'Open Sans';
     font-weight: 100;
