@@ -56,6 +56,10 @@ var getDetailedPackageInfo = function (request, result) {
 
 
             result.send(hbTemplate(packageInfo));
+        })
+        .on('error', function(err){
+            console.log("Something has gone wrong: ");
+            console.log(err);
         });
 };
 
