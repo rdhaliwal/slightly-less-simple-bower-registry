@@ -1,6 +1,6 @@
 {
   "name": "slightly-less-simple-bower-registry",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A very simple registry server compatible with bower 1.x. Forked from simple-bower-registry to add a simple web interface to view all the registered packages.",
   "main": "server.js",
   "bin": {
