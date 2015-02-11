@@ -12,6 +12,9 @@ $(document).ready(function() {
         if ($package.attr('data-loaded-data') !== 'true') {
             $detailsContainer.addClass('is-loading');
             console.log('Firing off request to:' + tempUrl);
+            $.ajaxSetup({
+              timeout: 1000
+            });
             $.ajax({
                 url: tempUrl,
                 cache: true
@@ -22,6 +25,9 @@ $(document).ready(function() {
                 $details.show();
                 $version.html($details.find('.BowerPackage-latestVersionNumber').html());
                 $package.attr('data-loaded-data', 'true');
+            })
+            .fail(function() {
+                $details.append('Something went wrong when loading this.');
             });
         }
     }

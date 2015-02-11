@@ -12,12 +12,19 @@ and this fork/spinoff project, slightly-less-simple-bower-registry
 
 Install with `npm install -g slightly-less-simple-bower-registry`.
 
-Then you can run the server as `slightly-less-simple-bower-registry`. TODO: Fix this?
+Then you can run the server as `start-bower-registry`. 
 
-The server runs on port 3333.
-By default the registry data is stored in a single file `./package-data.json`.
-You can specify a different file as a command-line paramater,
-e.g. `slightly-less-simple-bower-registry my-package-data.json`.
+The server runs on port 3333 by default. You can specify a different port number by passing in a `--port=XXXX` parameter
+
+```
+start-bower-registry --port=1234
+```
+
+By default the registry data is stored in a single file called `package-data.json`.
+You can specify a different file by passing in the `--storage` paramenter, e.g.
+```
+start-bower-registry --storage="./registryData.json"
+```
 
 To use your server with bower, update (or create) a .bowerrc file
 either in your home directory or in the directory for the package
